@@ -41,6 +41,14 @@ h1 {
     <div id="app">
 
       <h1>{{info.section}}</h1>
+
+      <section v-if="errored">
+        <p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>
+      </section>
+
+  <section v-else>
+    <div v-if="loading">Loading...</div>
+    <div v-else >
       
       <img v-bind:src="info.img" />
         <div>
@@ -66,7 +74,7 @@ h1 {
           </span>
         </div>
     </div>
-
+  </section>
 
 
     <script>
@@ -74,12 +82,19 @@ h1 {
         el: '#app',
         data () {
           return {
-            info: {}
+            info: {},
+            loading: true,
+            errored: false
           }
         },
         mounted () {
           axios.get('https://api.masterbranch.io/b/bna')
                .then(response => (this.info = response.data.body.data[0].data[0]))
+               .catch(error => {
+                  console.log(error)
+                  this.errored = true
+                })
+                .finally(() => this.loading = false)
 
         }
       })
