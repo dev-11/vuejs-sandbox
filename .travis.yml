@@ -1,6 +1,4 @@
-jobs:
-  allow_failures:
-    - rvm: 1.9.3
+language: python
 
 deploy:
   provider: s3
