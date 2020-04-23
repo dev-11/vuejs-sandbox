@@ -4,20 +4,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
 
     <title>Vue App</title>
   </head>
 
   <body>
-    <div id="app">{{message}}</div>
+    <div id="app">{{info}}</div>
 
     <script>
-      const App = new Vue({
+      new Vue({
         el: '#app',
-        data: {
-          message: 'Hello Vue!',
+        data () {
+          return {
+            info: null
+          }
         },
+        mounted () {
+          axios.get('https://api.masterbranch.io/b/bna',)
+               .then(response => (this.info = response))
+
+        }
       })
     </script>
-  </body>
+  </body> 
 </html>
