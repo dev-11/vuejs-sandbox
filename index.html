@@ -12,20 +12,39 @@
 
   <body>
     <div id="app">
-      <div>SECTION: {{info.section}}</div>
-      <hr />
-      <div>TITLE: {{info.title}}</div>
-      <hr />
-      <div>AUTHORS: {{info.authors}}</div>
-      <hr />
-      <div>PRICE: {{info.price}}</div>
-      <hr />
-      <div>FORMAT: {{info.format}}</div>
-      <hr />
-      <div>DESC:  {{info.desc}}</div>
-      <hr />
-      <img v-bind:src="info.img" />
+      <h1>{{info.section}}</h1>
+
+        <div>
+          {{ info.authors }}:
+          <span class="lighten">
+            <span ></span>{{ info.title }}
+          </span>
+        </div>
+
+        <div>
+          Price:
+          <span class="lighten">
+            <span></span>{{ info.price }}
+          </span>
+        </div>
+
+        <div>
+          Format:
+          <span class="lighten">
+            <span></span>{{ info.format }}
+          </span>
+        </div>
+
+        <div>
+          Description:
+          <span class="lighten">
+            <span></span>{{ info.desc }}
+          </span>
+        </div>
+        <img v-bind:src="info.img" />
     </div>
+
+
 
     <script>
       new Vue({
