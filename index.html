@@ -11,19 +11,33 @@
   </head>
 
   <body>
-    <div id="app">{{info}}</div>
+    <div id="app">
+      <div>SECTION: {{info.section}}</div>
+      <hr />
+      <div>TITLE: {{info.title}}</div>
+      <hr />
+      <div>AUTHORS: {{info.authors}}</div>
+      <hr />
+      <div>PRICE: {{info.price}}</div>
+      <hr />
+      <div>FORMAT: {{info.format}}</div>
+      <hr />
+      <div>DESC:  {{info.desc}}</div>
+      <hr />
+      <img v-bind:src="info.img" />
+    </div>
 
     <script>
       new Vue({
         el: '#app',
         data () {
           return {
-            info: null
+            info: {}
           }
         },
         mounted () {
-          axios.get('https://api.masterbranch.io/b/bna',)
-               .then(response => (this.info = response))
+          axios.get('https://api.masterbranch.io/b/bna')
+               .then(response => (this.info = response.data.body.data[0].data[0]))
 
         }
       })
