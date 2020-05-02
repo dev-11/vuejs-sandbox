@@ -17,5 +17,5 @@ deploy:
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   bucket: $AWS_BUCKET
   region: $AWS_REGION
-  skip_cleanup: true
+  skip_cleanup: false
   
