@@ -1,4 +1,15 @@
-language: generic
+language: node_js
+
+node_js:
+ - "node"
+
+cache: npm
+
+script:
+  - npm run build
+
+before_deploy:
+  - cd dist
 
 deploy:
   provider: s3
