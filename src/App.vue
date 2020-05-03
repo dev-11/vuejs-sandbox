@@ -62,4 +62,16 @@ body {
   font-family: "Roboto Slab", serif;
   line-height: 1.4;
 }
+
+.spinner-border {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+}
 </style>
