@@ -1,5 +1,5 @@
 <template>
-  <div class="card mt-3 border-0 rounded-0" style="width: 200px;">
+  <div class="card mt-3 border-1 rounded-0" style="width: 200px;">
     <div>
       <div class="archive-product-image-box" style="height: 200px;">
         <img v-bind:src="info.img" alt="asdf" class="card-img-top" />
