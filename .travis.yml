@@ -18,4 +18,3 @@ deploy:
   bucket: $AWS_BUCKET
   region: $AWS_REGION
   skip_cleanup: true
-  
