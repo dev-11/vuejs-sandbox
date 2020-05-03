@@ -32,7 +32,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .archive-product-image-box {
-  background: #f3f0ea;
+  background: #eef1e6;
   width: calc(100%);
   height: 0;
   padding-bottom: calc(100%);
