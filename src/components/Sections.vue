@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="card-deck">
     <div v-bind:key="d.section" v-for="d in sections">
       <SectionItem v-bind:info="d" />
     </div>
