@@ -6,12 +6,12 @@
       </div>
       <div>
         <div class="card-body">
-          <div class="card-text d-flex justify-content-center mb-3">
+          <div v-if="info.section != ''" class="card-text d-flex justify-content-center mb-3">
             <span class="badge badge-pill badge-primary">{{ info.section }}</span>
           </div>
           <div class="card-text">{{ info.title }}</div>
           <div class="card-text font-italic">{{ info.authors }}</div>
-          <div class="card-text">{{ info.price }} | {{ info.format }}</div>
+          <!-- <div class="card-text">{{ info.price }} | {{ info.format }}</div> -->
           <!-- <hr class="mt-3 mb-3 ml-5 mr-5" />
           <div class="card-text text-justify">{{ info.desc }}</div> -->
         </div>
