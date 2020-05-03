@@ -4,7 +4,11 @@
       <p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>
     </section>
     <section v-else>
-      <div v-if="loading">Loading...</div>
+      <div v-if="loading">
+        <div class="spinner-border text-primary" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
       <div v-else>
         <Sections v-bind:sections="sections" />
       </div>
@@ -42,19 +46,19 @@ export default {
 </script>
 
 <style>
-#app {
+/* #app {
   margin-top: 20px;
   width: 300px;
-  padding: 0 40px 40px;
+  padding: 0 40px 40px; 
   background: #2f242c;
   border-radius: 5px;
   color: #b3bfb8;
 }
-
+*/
 body {
   display: flex;
   justify-content: center;
-  background: #7e8d85;
+  /* background: #7e8d85; */
   font-family: "Roboto Slab", serif;
   line-height: 1.4;
 }
