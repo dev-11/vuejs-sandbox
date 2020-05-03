@@ -55,7 +55,7 @@ export default {
   cursor: pointer;
 }
 .archive-product-image-box img {
-  width: 35%;
+  width: 45%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
