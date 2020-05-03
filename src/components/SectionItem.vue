@@ -6,9 +6,9 @@
       </div>
       <div>
         <div class="card-body">
-          <div v-if="info.section != ''" class="card-text d-flex justify-content-center mb-3">
+          <!-- <div v-if="info.section != ''" class="card-text d-flex justify-content-center mb-3">
             <span class="badge badge-pill badge-primary">{{ info.section }}</span>
-          </div>
+          </div> -->
           <div class="card-text">{{ info.title }}</div>
           <div class="card-text font-italic">{{ info.authors }}</div>
           <!-- <div class="card-text">{{ info.price }} | {{ info.format }}</div> -->
