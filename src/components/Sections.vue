@@ -1,5 +1,5 @@
 <template>
-  <div class="card-deck">
+  <div class="card-deck ml-0">
     <div v-bind:key="d.section" v-for="d in sections">
       <SectionItem v-bind:info="d" />
     </div>
