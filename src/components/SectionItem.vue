@@ -1,20 +1,18 @@
 <template>
   <div class="card mt-3" style="width: 200px;">
+    <div class="archive-product-image-box">
+      <img v-bind:src="info.img" alt="asdf" class="card-img-top" />
+    </div>
     <div>
-      <div class="archive-product-image-box">
-        <img v-bind:src="info.img" alt="asdf" class="card-img-top" />
-      </div>
-      <div>
-        <div class="card-body">
-          <div class="card-text d-flex justify-content-center mb-3">
-            <span class="badge badge-pill badge-primary">{{ info.section }}</span>
-          </div>
-          <div class="card-text">{{ info.title }}</div>
-          <div class="card-text font-italic">{{ info.authors }}</div>
-          <div class="card-text">{{ info.price }} | {{ info.format }}</div>
-          <!-- <hr class="mt-3 mb-3 ml-5 mr-5" />
-          <div class="card-text text-justify">{{ info.desc }}</div> -->
+      <div class="card-body">
+        <div class="card-text d-flex justify-content-center mb-3">
+          <span class="badge badge-pill badge-custom">{{ info.section }}</span>
         </div>
+        <div class="card-text">{{ info.title }}</div>
+        <div class="card-text font-italic">{{ info.authors }}</div>
+        <div class="card-text">{{ info.price }} | {{ info.format }}</div>
+        <!-- <hr class="mt-3 mb-3 ml-5 mr-5" />-->
+        <!-- <div class="card-text">{{ info.desc }}</div> -->
       </div>
     </div>
   </div>
@@ -32,25 +30,25 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .archive-product-image-box {
-  background: #f3f0ea;
-  width: calc(100%);
-  height: 0;
+  background: #eef1e6;
+  /* width: calc(100%); */
+  /* height: 0; */
   padding-bottom: calc(100%);
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
+  /* display: -webkit-box; */
+  /* display: -moz-box; */
+  /* display: -ms-flexbox; */
+  /* display: -webkit-flex; */
+  /* display: flex; */
+  /* -webkit-align-items: center; */
+  /* -moz-align-items: center; */
+  /* -ms-align-items: center; */
+  /* -ms-flex-align: center; */
+  /* align-items: center; */
+  /* -webkit-justify-content: center; */
+  /* -moz-justify-content: center; */
+  /* -ms-justify-content: center; */
+  /* justify-content: center; */
+  /* -ms-flex-pack: center; */
   position: relative;
   cursor: pointer;
 }
@@ -65,5 +63,10 @@ export default {
   margin: 0 auto;
   left: 0;
   right: 0;
+}
+
+.badge-custom {
+  background-color: #96b6c5;
+  color: white;
 }
 </style>
