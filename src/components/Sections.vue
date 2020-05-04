@@ -1,6 +1,6 @@
 <template>
-<div class="justify-content-center">
-  <div class="card-deck ml-0">
+<div>
+  <div class="card-deck justify-content-center">
     <div v-bind:key="d.section" v-for="d in sections">
       <SectionItem v-bind:info="d" />
     </div>
