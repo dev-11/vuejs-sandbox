@@ -1,22 +1,43 @@
 <template>
   <div class="card mt-3 mb-3 ml-3 mr-3 border-1 rounded-0" style="width: 200px;">
-    <div>
-      <div class="archive-product-image-box" >
+    <div v-b-modal="info.id">
+      <div class="archive-product-image-box">
         <img v-bind:src="info.img" alt="asdf" />
       </div>
       <div>
         <div class="card-body">
           <!-- <div v-if="info.section != ''" class="card-text d-flex justify-content-center mb-3">
             <span class="badge badge-pill badge-primary">{{ info.section }}</span>
-          </div> -->
+          </div>-->
           <div class="card-text text-truncate">{{ info.title }}</div>
           <div class="card-text text-truncate font-italic">{{ info.authors }}</div>
           <!-- <div class="card-text">{{ info.price }} | {{ info.format }}</div> -->
           <!-- <hr class="mt-3 mb-3 ml-5 mr-5" />
-          <div class="card-text text-justify">{{ info.desc }}</div> -->
+          <div class="card-text text-justify">{{ info.desc }}</div>-->
         </div>
       </div>
     </div>
+    <b-modal v-bind:id="info.id" centered hide-footer hide-header>
+      <div>
+        <b-card no-body class="overflow-hidden" style="max-width: 540px;">
+          <b-row no-gutters>
+            <b-col md="6">
+              <b-card-img v-bind:src="info.img" alt="Image" class="rounded-0" />
+            </b-col>
+            <b-col md="6">
+              <b-card-body v-bind:title="info.title">
+                <b-card-text class="font-italic">by {{ info.authors }}</b-card-text>
+                <b-card-text>{{ info.price }} | {{ info.format }}</b-card-text>
+
+                <b-card-text>
+                  Steeped in an evocative gothic aura, Jenni Spangler’s outstanding fantasy novel features a manipulative medium and a gang of resourceful orphan children. Utterly absorbing and boasting delightfully creepy artwork from the great Chris Mould, The Vanishing Trick is an unqualified triumph of darkly magical fun.
+                </b-card-text>
+              </b-card-body>
+            </b-col>
+          </b-row>
+        </b-card>
+      </div>
+    </b-modal>
   </div>
 </template>
 
