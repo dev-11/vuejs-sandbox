@@ -1,4 +1,5 @@
 <template>
+<div class="justify-content-center">
   <div class="card-deck ml-0">
     <div v-bind:key="d.section" v-for="d in sections">
       <SectionItem v-bind:info="d" />
@@ -8,6 +9,7 @@
     <b-modal id="modal-1" title="BootstrapVue" centered hide-footer hide-header>
       <p class="my-4">Hello from modal!</p>
     </b-modal>
+  </div>
   </div>
 </template>
 
