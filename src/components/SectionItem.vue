@@ -17,7 +17,7 @@
         </div>
       </div>
     </div>
-    <b-modal v-bind:id="info.id" centered hide-footer hide-header>
+    <b-modal v-bind:id="info.id" centered hide-footer>
       <div>
         <b-card no-body class="overflow-hidden" style="max-width: 540px;">
           <b-row no-gutters>
